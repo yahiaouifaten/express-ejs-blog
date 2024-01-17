@@ -11,8 +11,12 @@ app.get("/", (req, res) => {
   res.render("index.ejs");
 });
 
-app.post("/submit", (req, res) => {
-  
+app.get("/home", (req, res) => {
+  res.render("index.ejs");
+});
+
+app.get("/subscribe", (req, res) => {
+  res.render("subscribe.ejs");
 });
 
 app.listen(port, () => {
