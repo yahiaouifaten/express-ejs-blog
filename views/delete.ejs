@@ -1,0 +1,27 @@
+<%- include("partials/header1.ejs") %>
+<main role="main" class="container">
+    <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+        <div class="col-md-6">
+            <!-- Content -->
+            <div class="card mb-3">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Delete Post</h5>
+
+                    <!-- Confirmation Message -->
+                    <p>Are you sure you want to delete this post?</p>
+
+                    <!-- Delete Confirmation Form -->
+                    <form action="/delete-post" method="POST">
+                        <!-- Add Post ID as a hidden input to identify the post to delete -->
+                        <input type="hidden" name="postId" value="post_id_here">
+
+                        <!-- Yes and No Buttons -->
+                        <button type="submit" class="btn btn-danger">Yes, delete</button>
+                        <a href="/posts" class="btn btn-secondary">No, cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<%- include("partials/footer.ejs") %>

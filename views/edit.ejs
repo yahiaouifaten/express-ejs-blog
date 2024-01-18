@@ -1,0 +1,32 @@
+<%- include("partials/header1.ejs") %>
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <!-- Content -->
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Edit Post</h5>
+
+                    <!-- Edit Post Form -->
+                    <form action="/update-post" method="POST">
+                        <!-- Post Title -->
+                        <div class="form-group">
+                            <label for="postTitle">Title</label>
+                            <input type="text" class="form-control" id="postTitle" name="postTitle" value="Current Title">
+                        </div>
+
+                        <!-- Post Content -->
+                        <div class="form-group">
+                            <label for="postContent">Content</label>
+                            <textarea class="form-control" id="postContent" name="postContent" rows="5">Current Content</textarea>
+                        </div>
+
+                        <!-- Update Button -->
+                        <button type="submit" class="btn btn-primary">Update Post</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<%- include("partials/footer.ejs") %>
